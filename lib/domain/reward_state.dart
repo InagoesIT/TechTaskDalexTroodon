@@ -1,0 +1,4 @@
+enum RewardState {
+  proposed,
+  archived
+}

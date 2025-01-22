@@ -1,0 +1,4 @@
+enum RewardSubtitleType {
+  likes,
+  employeeNameAndSurname
+}
