@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tech_task_dalex_troodon/domain/reward.dart';
 import 'package:tech_task_dalex_troodon/presentation/providers/rewards_provider.dart';
+import 'package:tech_task_dalex_troodon/presentation/widgets/proposed_reward_screen/employee_feedback_list.dart';
 import 'package:tech_task_dalex_troodon/presentation/widgets/proposed_reward_screen/list_of_rewards_box.dart';
 import 'package:tech_task_dalex_troodon/presentation/widgets/proposed_reward_screen/reward_form/reward_form.dart';
 import 'package:tech_task_dalex_troodon/presentation/widgets/reward_ideas_screen/rewards_filter_panel.dart';
@@ -24,7 +25,7 @@ class ProposedRewardScreen extends StatelessWidget {
           numberOfLikes: reward.likesNumber,
         ),
         body: Padding(
-            padding: EdgeInsets.only(left: 18.w, right: 22.w),
+            padding: EdgeInsets.only(left: 18.w, right: 22.w, bottom: 22.h),
             child: ListView(children: [
               SizedBox(
                 height: 42.h,
@@ -51,7 +52,11 @@ class ProposedRewardScreen extends StatelessWidget {
               SizedBox(
                 height: 24.h,
               ),
-              const RewardForm()
+              const RewardForm(),
+              SizedBox(
+                height: 26.h,
+              ),
+              EmployeeFeedbackList(feedback: reward.employeeFeedback)
             ])));
   }
 }
